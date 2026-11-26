@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Polaris Vision AR Try-On</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.0/dist/mindar-face-aframe.prod.js"></script>
+  <style>
+    body { margin: 0; overflow: hidden; }
+  </style>
+</head>
+<body>
+  <a-scene mindar-face="autoStart: true; maxFaces: 1;" vr-mode-ui="enabled: false" embedded>
+    
+    <!-- Face anchor (glasses will follow your face) -->
+    <a-entity mindar-face-target="targetIndex: 0">
+      <!-- Glasses placeholder -->
+      <a-box position="0 0.05 0" depth="0.05" height="0.05" width="0.2" color="cyan"></a-box>
+    </a-entity>
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+  </a-scene>
+</body>
+</html>
